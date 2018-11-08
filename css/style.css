@@ -1,0 +1,38 @@
+/* table{
+    border: 2px black solid;
+} */
+
+td.header{
+    padding: 0 10px 0 0px;
+    border: 1px black solid;
+}
+
+tr.special{
+    background-color: gray;
+    font-weight: bold;
+}
+
+tr td:nth-child(odd){
+    background-color: rgba(158, 111, 111, 0.527);
+}
+
+tr td:nth-child(even){
+    background-color: rgb(255, 255, 255);
+}
+
+td{
+    padding: 0 0 0 0px;
+    margin: 0;
+}
+
+input{
+    width: 50px;
+    background-color: transparent;
+    text-align: center;
+}
+
+th{
+    background-color: lightslategray;
+    padding: 0 0 0 0px;
+}
+
