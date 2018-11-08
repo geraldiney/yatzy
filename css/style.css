@@ -2,23 +2,23 @@
     border: 2px black solid;
 } */
 
-td.header{
-    padding: 0 10px 0 0px;
-    border: 1px black solid;
-}
-
-tr.special{
-    background-color: gray;
+tr:nth-child(8) td,
+tr:nth-child(9) td,
+tr:nth-child(19) td
+{
     font-weight: bold;
+    background-color:aqua;
 }
 
-tr td:nth-child(odd){
-    background-color: rgba(158, 111, 111, 0.527);
+td:nth-child(even){
+    background-color: red;
 }
 
-tr td:nth-child(even){
-    background-color: rgb(255, 255, 255);
+td:nth-child(odd){
+    background-color:green;
 }
+
+
 
 td{
     padding: 0 0 0 0px;
@@ -27,7 +27,7 @@ td{
 
 input{
     width: 50px;
-    background-color: transparent;
+    background-color: inherit;
     text-align: center;
 }
 
