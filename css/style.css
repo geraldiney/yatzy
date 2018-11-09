@@ -1,19 +1,32 @@
- table{
+ body {
+     padding:0;
+     margin:0 auto;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+
+ table {
+    margin-top: 10px;
+    margin-left: 10px;
     border: 2px rgb(13, 1, 36) solid;
     border-collapse: collapse;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } 
+
+tr:hover td {
+    background-color:#ffb200;
+    color: white;
+}
 
 tr:nth-child(8) td,
 tr:nth-child(9) td,
 tr:nth-child(19) td
 {
     font-weight: bold;
-    background-color:#7b9ba6;
+    background-color:#2e2e2e;
+    color:white;
 }
 
 td:nth-child(even){
-    background-color:#cdd6d5;
+    background-color:#dfe0ab;
 }
 
 td:nth-child(odd){
@@ -21,31 +34,61 @@ td:nth-child(odd){
    
 }
 
+td:nth-child(1) {
+    padding-left:10px;
+    padding-right: 10px;
+}
 
 
-td{
-    padding: 0 0 0 0px;
+td, th {
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin: 0px;
     border: black 1px solid ;
 }
 
 input{
-    width: 50px;
+    width: 60px;
     background-color: transparent;
     text-align: center;
+    border-style: none;
 }
 
 th{
-    color: white;
-    background-color: #233656;
-    padding: 0 0 0 0px;
+    color: #ffd64c;
+    background-color: #171717;
 }
 
-h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+nav {
+    background-color: black;
+    margin:0;
+    overflow: hidden;
 }
 
-h2{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+.topnav-left {
+    float: left;
 }
+
+.topnav-left a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.topnav-right {
+    float:right;
+    padding: 15px 20px;
+}
+
+a.active {
+    color: #ffb200;
+}
+
+nav a:hover {
+    background-color: #ffd64c;
+    color: black;
+  }
 

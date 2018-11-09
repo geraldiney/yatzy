@@ -2,18 +2,25 @@
 <html lang="sv">
 
 <head>
-    <link href="css/style.css"
-    rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <title>Yatzy</title>
     <meta charset="UTF-8">
 </head>
 
 <body>
-    <p> Gå till:
-        <a href="index.html">Log Out</a>
-        <a href="results.html">Scores</a>
-        <a href="yatzy.html">New Game</a>
-    </p>
+    <nav>
+        
+        <div class="topnav-left">
+            <img src="img/dice.jpg" alt="Yatzy logga"> 
+            <a href="starterpage.html">Start</a>
+            <a class="active" href="#">Nytt spel</a>
+            <a href="results.html">Tidigare resultat</a>
+            <a href="profile.html">Min spelprofil</a>
+        </div>
+        <div class="topnav-right">
+            <a href="index.html"><button>Logga ut</button></a>
+        </div>
+    </nav>
     <table>
         <tr>
             <th>Spelare</th>
@@ -23,132 +30,133 @@
             <th>GY</th>
         </tr>
         <tr>
-            <td class="header">Ettor</td>
+            <td>Ettor</td>
             <td><input type="number" min="0" max="5"></td>
             <td><input type="number" min="0" max="5"></td>
             <td><input type="number" min="0" max="5"></td>
             <td><input type="number" min="0" max="5"></td>
         </tr>
         <tr>
-            <td class="header">Tvåor</td>
+            <td>Tvåor</td>
             <td><input type="number" min="0" max="10" step="2"></td>
             <td><input type="number" min="0" max="10" step="2"></td>
             <td><input type="number" min="0" max="10" step="2"></td>
             <td><input type="number" min="0" max="10" step="2"></td>
         </tr>
         <tr>
-            <td class="header">Treor</td>
+            <td>Treor</td>
             <td><input type="number" min="0" max="15" step="3"></td>
             <td><input type="number" min="0" max="15" step="3"></td>
             <td><input type="number" min="0" max="15" step="3"></td>
             <td><input type="number" min="0" max="15" step="3"></td>
         </tr>
         <tr>
-            <td class="header">Fyror</td>
+            <td>Fyror</td>
             <td><input type="number" min="0" max="20" step="4"></td>
             <td><input type="number" min="0" max="20" step="4"></td>
             <td><input type="number" min="0" max="20" step="4"></td>
             <td><input type="number" min="0" max="20" step="4"></td>
         </tr>
         <tr>
-            <td class="header">Femmor</td>
+            <td>Femmor</td>
             <td><input type="number" min="0" max="25" step="5"></td>
             <td><input type="number" min="0" max="25" step="5"></td>
             <td><input type="number" min="0" max="25" step="5"></td>
             <td><input type="number" min="0" max="25" step="5"></td>
         </tr>
         <tr>
-            <td class="header">Sexor</td>
+            <td>Sexor</td>
             <td><input type="number" min="0" max="30" step="6"></td>
             <td><input type="number" min="0" max="30" step="6"></td>
             <td><input type="number" min="0" max="30" step="6"></td>
             <td><input type="number" min="0" max="30" step="6"></td>
         </tr>
-        <tr class="special">
-            <td class="header">Summa</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-        <tr class="special">
-            <td  class="header">Bonus</td>
+        <tr>
+            <td>Summa</td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
         </tr>
         <tr>
-            <td  class="header">Ett par</td>
+            <td>Bonus</td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
         </tr>
         <tr>
-            <td  class="header">Två par</td>
+            <td>Ett par</td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
         </tr>
         <tr>
-            <td class="header">Tretal</td>
+            <td>Två par</td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
         </tr>
         <tr>
-            <td class="header">Fyrtal</td>
+            <td>Tretal</td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
         </tr>
         <tr>
-            <td class="header">Liten stege</td>
+            <td>Fyrtal</td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
         </tr>
         <tr>
-            <td class="header">Stor stege</td>
+            <td>Liten stege</td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
         </tr>
         <tr>
-            <td class="header">Kåk</td>
+            <td>Stor stege</td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
         </tr>
         <tr>
-            <td class="header">Chans</td>
+            <td>Kåk</td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
         </tr>
         <tr>
-            <td class="header">Yatzy</td>
+            <td>Chans</td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
         </tr>
-        <tr class="special">
-            <td class="header">Totalt</td>
+        <tr>
+            <td>Yatzy</td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+        </tr>
+        <tr>
+            <td>Totalt</td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
             <td><input type="number"></td>
         </tr>
     </table>
+
 </body>
 
 </html>
