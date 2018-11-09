@@ -9,6 +9,8 @@
     margin-left: 10px;
     border: 2px rgb(13, 1, 36) solid;
     border-collapse: collapse;
+    animation-duration: 1s;
+    animation-name: slidein; 
 } 
 
 tr:hover td {
@@ -52,6 +54,7 @@ input{
     background-color: transparent;
     text-align: center;
     border-style: none;
+    color: inherit;
 }
 
 th{
@@ -91,4 +94,25 @@ nav a:hover {
     background-color: #ffd64c;
     color: black;
   }
+
+  .dices {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation-duration: 1s;
+    animation-name: slidein2; 
+    
+  }
+
+  @keyframes slidein{
+    from {
+        margin-top: 70%;
+    }
+}
+
+    @keyframes slidein2{
+        from {
+            margin-left: 70%;
+        }
+    }
 
