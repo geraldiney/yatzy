@@ -66,6 +66,29 @@ nav {
     background-color: black;
     margin:0;
     overflow: hidden;
+    display:flex;
+    justify-content: center;
+}
+
+nav div {
+    display: flex;
+}
+
+nav div span {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:576px) {
+
+    nav div {
+        align-items: center;
+    }
+    nav div span {
+        flex-direction: column;
+    }
+
+    
 }
 
 .topnav-left {
