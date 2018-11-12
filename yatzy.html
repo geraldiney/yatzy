@@ -9,159 +9,162 @@
 </head>
 
 <body>
-    <nav>   
+    <nav>
         <div class="topnav-left">
-            <img src="img/dice.jpg" alt="Yatzy logga"> 
+
+            <img id="logo" src="img/dice.jpg" alt="Yatzy logga">
             <span class="navlinks">
                 <a href="starterpage.html">Start</a>
                 <a class="active" href="yatzy.html">Nytt spel</a>
                 <a href="results.html">Tidigare resultat</a>
                 <a href="profile.html">Min spelprofil</a>
             </span>
-           
         </div>
         <div class="topnav-right">
             <a href="index.html"><button>Logga ut</button></a>
         </div>
     </nav>
-    <table>
-        <tr>
-            <th>Spelare</th>
-            <th>TT</th>
-            <th>BP</th>
-            <th>VR</th>
-            <th>GY</th>
-        </tr>
-        <tr>
-            <td>Ettor</td>
-            <td><input type="number" min="0" max="5"></td>
-            <td><input type="number" min="0" max="5"></td>
-            <td><input type="number" min="0" max="5"></td>
-            <td><input type="number" min="0" max="5"></td>
-        </tr>
-        <tr>
-            <td>Tvåor</td>
-            <td><input type="number" min="0" max="10" step="2"></td>
-            <td><input type="number" min="0" max="10" step="2"></td>
-            <td><input type="number" min="0" max="10" step="2"></td>
-            <td><input type="number" min="0" max="10" step="2"></td>
-        </tr>
-        <tr>
-            <td>Treor</td>
-            <td><input type="number" min="0" max="15" step="3"></td>
-            <td><input type="number" min="0" max="15" step="3"></td>
-            <td><input type="number" min="0" max="15" step="3"></td>
-            <td><input type="number" min="0" max="15" step="3"></td>
-        </tr>
-        <tr>
-            <td>Fyror</td>
-            <td><input type="number" min="0" max="20" step="4"></td>
-            <td><input type="number" min="0" max="20" step="4"></td>
-            <td><input type="number" min="0" max="20" step="4"></td>
-            <td><input type="number" min="0" max="20" step="4"></td>
-        </tr>
-        <tr>
-            <td>Femmor</td>
-            <td><input type="number" min="0" max="25" step="5"></td>
-            <td><input type="number" min="0" max="25" step="5"></td>
-            <td><input type="number" min="0" max="25" step="5"></td>
-            <td><input type="number" min="0" max="25" step="5"></td>
-        </tr>
-        <tr>
-            <td>Sexor</td>
-            <td><input type="number" min="0" max="30" step="6"></td>
-            <td><input type="number" min="0" max="30" step="6"></td>
-            <td><input type="number" min="0" max="30" step="6"></td>
-            <td><input type="number" min="0" max="30" step="6"></td>
-        </tr>
-        <tr>
-            <td>Summa</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>Bonus</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>Ett par</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>Två par</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>Tretal</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>Fyrtal</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>Liten stege</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>Stor stege</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>Kåk</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>Chans</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>Yatzy</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>Totalt</td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-        </tr>
-    </table>
 
-    <div class="dices">
-        <img src="img/dice.jpg" alt="dice">
+    <div class="container">
+        <table>
+            <tr>
+                <th>Spelare</th>
+                <th>TT</th>
+                <th>BP</th>
+                <th>VR</th>
+                <th>GY</th>
+            </tr>
+            <tr>
+                <td>Ettor</td>
+                <td><input type="number" min="0" max="5"></td>
+                <td><input type="number" min="0" max="5"></td>
+                <td><input type="number" min="0" max="5"></td>
+                <td><input type="number" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td>Tvåor</td>
+                <td><input type="number" min="0" max="10" step="2"></td>
+                <td><input type="number" min="0" max="10" step="2"></td>
+                <td><input type="number" min="0" max="10" step="2"></td>
+                <td><input type="number" min="0" max="10" step="2"></td>
+            </tr>
+            <tr>
+                <td>Treor</td>
+                <td><input type="number" min="0" max="15" step="3"></td>
+                <td><input type="number" min="0" max="15" step="3"></td>
+                <td><input type="number" min="0" max="15" step="3"></td>
+                <td><input type="number" min="0" max="15" step="3"></td>
+            </tr>
+            <tr>
+                <td>Fyror</td>
+                <td><input type="number" min="0" max="20" step="4"></td>
+                <td><input type="number" min="0" max="20" step="4"></td>
+                <td><input type="number" min="0" max="20" step="4"></td>
+                <td><input type="number" min="0" max="20" step="4"></td>
+            </tr>
+            <tr>
+                <td>Femmor</td>
+                <td><input type="number" min="0" max="25" step="5"></td>
+                <td><input type="number" min="0" max="25" step="5"></td>
+                <td><input type="number" min="0" max="25" step="5"></td>
+                <td><input type="number" min="0" max="25" step="5"></td>
+            </tr>
+            <tr>
+                <td>Sexor</td>
+                <td><input type="number" min="0" max="30" step="6"></td>
+                <td><input type="number" min="0" max="30" step="6"></td>
+                <td><input type="number" min="0" max="30" step="6"></td>
+                <td><input type="number" min="0" max="30" step="6"></td>
+            </tr>
+            <tr>
+                <td>Summa</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Bonus</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Ett par</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Två par</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Tretal</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Fyrtal</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Liten stege</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Stor stege</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Kåk</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Chans</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Yatzy</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Totalt</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+        </table>
+
+        <div class="dices">
+            <img src="img/dice.jpg" alt="dice">
+        </div>
     </div>
 
 </body>
