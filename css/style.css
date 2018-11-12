@@ -74,6 +74,7 @@
      align-items: center;
      flex-flow: row wrap;
      justify-content: space-around;
+     text-align: center;
  }
 
  /* Mobil */
