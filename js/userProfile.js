@@ -27,3 +27,15 @@ userProfile.mail = mail;
 listOfUsers.push(userProfile)
 }
 
+function getPlayer(userId){
+
+    listOfUsers.forEach(userProfile => {
+        if(userProfile.userId==userId){
+            return userProfile.userName;
+        }
+        
+    });
+}
+
+//////////////////////////////////////////////
+
