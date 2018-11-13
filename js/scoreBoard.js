@@ -12,6 +12,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var scores = [ones, twos, threes, fours, fives, sixes];
 
     console.log(typeof sixes.value);
+
+    var test = document.getElementsByTagName('input');
+    console.log(test);
+
+
     // Ha koll på om någon klickar på beräkna-knappen.
     calc_button.addEventListener("click", function (event) {
         // Do something.
@@ -41,3 +46,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 });
+
+function randomize() {
+    var min = 1;
+    var max = 6;
+    var slump = Math.floor(Math.random() * (max - min) + min);
+    document.getElementById("inputField").value = slump;
+}
