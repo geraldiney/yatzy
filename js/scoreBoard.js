@@ -17,15 +17,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
     button_throwDice.addEventListener("click",function(event){
         throwDice();
     });
-   
+
+
 
 
     var scores = [ones, twos, threes, fours, fives, sixes];
 
     console.log(typeof sixes.value);
 
-    var test = document.getElementsByTagName('input');
-    console.log(test);
+    // var test = document.getElementsByClassName("player2");
+    // console.log(test);
 
 
     // Ha koll på om någon klickar på beräkna-knappen.
@@ -64,8 +65,42 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-
+ 
 });
+//Funktion utifrån classnamn
+function calculatePlayerUpper(){
+    
+    let playerNumber = 2;
+    let playerClassUpper = document.getElementsByClassName("player" + playerNumber + "_upper");
+
+    for (var i = 0; i < playerClassUpper.length; i++){
+        playerClassUpper[i].addEventListener("change",calculatePlayerUpper );
+    }
+
+    let sum = 0;
+
+    for (var item of playerClassUpper){
+        if (item.value !== ""){
+        sum += parseInt(item.value)
+        console.log("Testy " +parseInt(sum));
+        }
+    }
+
+    var player1_bonus = document.getElementById("player" + playerNumber+"_bonus");
+    var player1_sum = document.getElementById("player"+ playerNumber+"_sum");
+    player1_sum.value = sum;
+    //Bonus
+    if (sum >= 63) {
+        sum += 50;
+        
+        player1_bonus.value=50;
+    }
+    else {
+        player1_bonus.value=0;  
+    }
+
+    console.log("From Upper: " + sum);
+}
 
 function throwDice(){
     dice1.value = randomize();
