@@ -1,74 +1,171 @@
- table{
-    border: 2px rgb(13, 1, 36) solid;
-    border-collapse: collapse;
+body {
+    padding: 0;
+    margin: 0 auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-} 
-
-table.result{
-    border: 2px rgb(13, 1, 36) solid;
-    border-collapse: collapse;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2em;   
 }
 
-@keyframes slidein{
-    from {
-        margin-left: 50%;
-        width: 300%;
-    }
-
-    /* 75%{
-        margin-left: 25%;
-        width: 150%
-    } */
+table {
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 2px rgb(13, 1, 36) solid;
+    border-collapse: collapse;
+    animation-duration: 1s;
+    animation-name: slidein;
 }
 
-tr:nth-child(8) td,
-tr:nth-child(9) td,
-tr:nth-child(19) td
-{
+.result{
+    font-size: 2.0em;
+}
+
+tr:hover td {
+    background-color: #ffb200;
+    color: white;
+}
+
+tr:nth-child(8) td, tr:nth-child(9) td, tr:nth-child(19) td {
     font-weight: bold;
-    background-color:#7b9ba6;
+    background-color: #2e2e2e;
+    color: white;
 }
 
-td:nth-child(even){
-    background-color:#cdd6d5;
+td:nth-child(even) {
+    background-color: #dfe0ab;
 }
 
-td:nth-child(odd){
-    background-color:white;
-   
+td:nth-child(odd) {
+    background-color: white;
 }
 
+td:nth-child(1) {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
-
-td{
-    padding: 0 0 0 0px;
+td, th {
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin: 0px;
-    border: black 1px solid ;
+    border: black 1px solid;
 }
 
-input{
-    width: 50px;
+input {
+    width: 60px;
     background-color: transparent;
+    text-align: center;
+    border-style: none;
+    color: inherit;
+}
+
+th {
+    color: #ffd64c;
+    background-color: #171717;
+}
+
+nav {
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+nav div {
+    display: flex;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-around;
     text-align: center;
 }
 
-th{
-    color: white;
-    background-color: #233656;
-    padding: 0 0 0 0px;
+/* Mobil */
+
+@media screen and (max-width:576px) {
+    nav div {
+        align-items: center;
+    }
+    #logo {
+        display: none;
+    }
+    nav span {
+        align-items: center;
+    }
+    .navlinks {
+        flex-flow: column wrap;
+        justify-content: center;
+        font-size: 1.5em;
+    }
+
+    h1{
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .result{
+        font-size: 2.5em;
+        margin-left:auto;
+        margin-right: auto;
+    }
+
 }
 
-h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    animation-duration: 3s;
-    animation-name: slidein; 
+.topnav-left {
+    float: left;
 }
 
-h2{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    animation-duration: 5s;
-    animation-name: slidein;  
+.topnav-left a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
+.topnav-right {
+    float: right;
+    padding: 15px 20px;
+}
+
+a.active {
+    color: #ffb200;
+}
+
+.topnav-left a:hover {
+    background-color: #ffd64c;
+    color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+}
+
+.dices {
+    padding: 10px;
+    align-items: flex-start;
+    display: flex;
+    animation-duration: 1s;
+    animation-name: slidein2;
+}
+
+@keyframes slidein {
+    from {
+        margin-top: 70%;
+    }
+}
+
+@keyframes slidein2 {
+    from {
+        margin-left: 70%;
+    }
+}
