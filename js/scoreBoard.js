@@ -13,28 +13,38 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     console.log(typeof sixes.value);
     // Ha koll på om någon klickar på beräkna-knappen.
-    calc_button.addEventListener("click", function (event) {
+
+    function calculatePlayer(event) {
         // Do something.
         var total = 0;
 
         for (var score of scores){
             if (score.value !== ""){
                 total += parseInt(score.value);
-                console.log(total);
-            } else {
                 
-            }
+                console.log(total);
+            } 
             
         }
-
+        var player1_bonus = document.getElementById("player1_bonus");
+        var player1_sum = document.getElementById("player1_sum");
+        player1_sum.value = total;
         //Bonus
         if (total >= 63) {
             total += 50;
+            
+            player1_bonus.value=50;
         }
+        else {
+            player1_bonus.value=0;  
+        }
+      
 
-        alert("Total score: " + total);
+    }
 
-    });
+
+
+    ones.addEventListener("change",calculatePlayer );
 
 
 
