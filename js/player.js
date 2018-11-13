@@ -48,6 +48,8 @@ calc_button.addEventListener("click", function(event) {
 })
 
 function checkHouse(array){
-    for (var i = 0; i<<)
+    for (var i = 0; i< array.length; i++){
+        
+    }
 }
 
