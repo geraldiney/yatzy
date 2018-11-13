@@ -4,9 +4,12 @@
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  }
 
+.container {
+    margin-top: 20px;
+}
+
+/* - Table - */
  table {
-     margin-top: 10px;
-     margin-left: 10px;
      border: 2px rgb(13, 1, 36) solid;
      border-collapse: collapse;
      animation-duration: 1s;
@@ -32,12 +35,12 @@
      background-color: white;
  }
 
- td:nth-child(1) {
+ th, td:nth-child(1) {
      padding-left: 10px;
      padding-right: 10px;
  }
 
- td, th {
+ tr td, tr th {
      padding-top: 5px;
      padding-bottom: 5px;
      margin: 0px;
@@ -55,17 +58,17 @@
  th {
      color: #ffd64c;
      background-color: #171717;
- }
+ } 
 
- nav {
+.navbar {
      background-color: black;
-     margin: 0;
+     /* margin: 0;
      overflow: hidden;
      display: flex;
-     justify-content: center;
- }
+     justify-content: center; */
+ } 
 
- nav div {
+ /* nav div {
      display: flex;
  }
 
@@ -75,28 +78,10 @@
      flex-flow: row wrap;
      justify-content: space-around;
      text-align: center;
- }
+ } */
 
- /* Mobil */
 
- @media screen and (max-width:576px) {
-     nav div {
-         align-items: center;
-     }
-     #logo {
-         display: none;
-     }
-     nav span {
-         align-items: center;
-     }
-     .navlinks {
-         flex-flow: column wrap;
-         justify-content: center;
-         font-size: 1.5em;
-     }
- }
-
- .topnav-left {
+ /* .topnav-left {
      float: left;
  }
 
@@ -112,24 +97,20 @@
  .topnav-right {
      float: right;
      padding: 15px 20px;
- }
+ } */
 
- a.active {
+ /* a.active {
      color: #ffb200;
- }
+ } */
 
- .topnav-left a:hover {
+ /* .topnav-left a:hover {
      background-color: #ffd64c;
      color: black;
- }
+ } */
 
- .container {
-     display: flex;
-     justify-content: flex-start;
-     flex-flow: row wrap;
- }
 
- .dices {
+
+ /* .dices {
      padding: 10px;
      align-items: flex-start;
      display: flex;
@@ -147,4 +128,4 @@
      from {
          margin-left: 70%;
      }
- }
+ } */
