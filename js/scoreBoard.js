@@ -1,13 +1,24 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
 
-    var calc_button = document.getElementById("calc");
+
     var ones = document.getElementById("player1_ones");
     var twos = document.getElementById("player1_twos");
     var threes = document.getElementById("player1_threes");
     var fours = document.getElementById("player1_fours");
     var fives = document.getElementById("player1_fives");
     var sixes = document.getElementById("player1_sixes");
+    var dice1 = document.getElementById("dice1");
+    var dice2 = document.getElementById("dice2");
+    var dice3 = document.getElementById("dice3");
+    var dice4 = document.getElementById("dice4");
+    var dice5 = document.getElementById("dice5");
+    var button_throwDice = document.getElementById("throwDices");
+    button_throwDice.addEventListener("click",function(event){
+        throwDice();
+    });
+   
+
 
     var scores = [ones, twos, threes, fours, fives, sixes];
 
@@ -46,10 +57,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
       
 
     }
-
-
-
     ones.addEventListener("change",calculatePlayer );
+
+
 
 
 
@@ -57,9 +67,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 });
 
+function throwDice(){
+    dice1.value = randomize();
+    dice2.value = randomize();
+    dice3.value = randomize();
+    dice4.value = randomize();
+    dice5.value = randomize();
+
+}
+
 function randomize() {
     var min = 1;
-    var max = 6;
+    var max = 7;
     var slump = Math.floor(Math.random() * (max - min) + min);
-    document.getElementById("inputField").value = slump;
+    return slump;
 }
