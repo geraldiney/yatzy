@@ -150,10 +150,11 @@ function calculatePlayerUnder() {
         playerNumber = player;
 
         let playerClassUnder = document.getElementsByClassName("player" + playerNumber);
+    
 
         //Iterera genom alla element och lägger på eventlistener för classen
         for (var i = 0; i < playerClassUnder.length; i++) {
-            playerClassUnder[i].addEventListener("change", calculatePlayerUpper);
+            playerClassUnder[i].addEventListener("change", calculatePlayerUnder);
         }
 
         let sumUnder = 0;
