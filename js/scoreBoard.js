@@ -14,8 +14,27 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var dice4 = document.getElementById("dice4");
     var dice5 = document.getElementById("dice5");
     var button_throwDice = document.getElementById("throwDices");
+    var button_doneButton = document.getElementById("doneButton");
+    var count = 3;
+
+    button_doneButton.addEventListener("click"), function(event){
+
+        
+    }
+
     button_throwDice.addEventListener("click", function (event) {
+        
+       
+        
+        if(count>0){
         throwDice();
+        count--;
+        }
+        else{
+            //next player
+            count = 0;
+        }
+        //
     });
 
 
@@ -106,11 +125,23 @@ function calculatePlayerUpper() {
 }
 
 function throwDice() {
+
+    
+    if(!document.getElementById("diceCheck1").checked){
     dice1.value = randomize();
+    }
+    if(!document.getElementById("diceCheck2").checked){
     dice2.value = randomize();
+    }
+    if(!document.getElementById("diceCheck3").checked){
     dice3.value = randomize();
+    }
+    if(!document.getElementById("diceCheck4").checked){
     dice4.value = randomize();
+    }
+    if(!document.getElementById("diceCheck5").checked){
     dice5.value = randomize();
+    }
 
 }
 
