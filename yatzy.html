@@ -102,17 +102,17 @@
                     </tr>
                     <tr>
                         <td>Summa</td>
-                        <td><input class="player1" id="player1_sum" type="number"></td>
-                        <td><input class="player2" id="player2_sum" type="number"></td>
-                        <td><input class="player3" id="player3_sum" type="number"></td>
-                        <td><input class="player4" id="player4_sum" type="number"></td>
+                        <td><input class="player1_special" id="player1_sum" type="number"></td>
+                        <td><input class="player2_special" id="player2_sum" type="number"></td>
+                        <td><input class="player3_special" id="player3_sum" type="number"></td>
+                        <td><input class="player4_special" id="player4_sum" type="number"></td>
                     </tr>
                     <tr>
                         <td>Bonus</td>
-                        <td><input class="player1" id="player1_bonus" type="number"></td>
-                        <td><input class="player2" id="player2_bonus" type="number"></td>
-                        <td><input class="player3" id="player3_bonus" type="number"></td>
-                        <td><input class="player4" id="player4_bonus" type="number"></td>
+                        <td><input class="player1_special" id="player1_bonus" type="number"></td>
+                        <td><input class="player2_special" id="player2_bonus" type="number"></td>
+                        <td><input class="player3_special" id="player3_bonus" type="number"></td>
+                        <td><input class="player4_special" id="player4_bonus" type="number"></td>
                     </tr>
                     <tr>
                         <td>Ett par</td>
@@ -179,10 +179,11 @@
                     </tr>
                     <tr>
                         <td>Totalt</td>
-                        <td><input class="player1" id="player1_total" type="number"></td>
-                        <td><input class="player2" id="player2_total" type="number"></td>
-                        <td><input class="player3" id="player3_total" type="number"></td>
-                        <td><input class="player4" id="player4_total" type="number"></td>
+                        <!-- Är det okej att ha samma classnamn som id? -->
+                        <td><input class="player1_total" id="player1_total" type="number"></td>
+                        <td><input class="player2_total" id="player2_total" type="number"></td>
+                        <td><input class="player3_total" id="player3_total" type="number"></td>
+                        <td><input class="player4_total" id="player4_total" type="number"></td>
                     </tr>
                 </table>
             </div>
@@ -229,6 +230,8 @@
                     <input id="diceCheck5" type="checkbox">
                 </div>
             </div>
+
+            <p id="whosTurn"></p>
 
             <div class="col-lg-3 col-md-12 col-sm-12 players">
                 <div class="row">
