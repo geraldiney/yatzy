@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var button_doneButton = document.getElementById("doneButton");
     var count = 3;
 
-    button_doneButton.addEventListener("click"), function(event){
+    button_doneButton.addEventListener("click", function(event){
 
 
-    }
+    });
 
     button_throwDice.addEventListener("click", function (event) {
         
