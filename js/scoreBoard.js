@@ -118,15 +118,22 @@ function calculatePlayerUnder() {
             playerClassUnder[i].addEventListener("change", calculatePlayerUpper);
         }
 
-        let sum = 0;
+        let sumUnder = 0;
 
         //addera summorna
-        for (var element of playerClassUpper) {
+        for (var element of playerClassUnder) {
             if (element.value !== "") {
-                sum += parseInt(element.value)
+                sumUnder += parseInt(element.value)
             }
         }
+
+        var player_sumUpper = document.getElementById("player" + playerNumber + "_sum");
+        var player_bonusUpper = document.getElementById("player" + playerNumber + "_bonus");
+
+        var player_total = document.getElementById("player" + playerNumber + "_total");
+        player_total.value = sumUnder + parseInt(player_sumUpper.value) + parseInt(player_bonusUpper.value) ;
     }
+}
 
     function throwDice() {
         dice1.value = randomize();
