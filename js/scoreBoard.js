@@ -51,8 +51,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             total += 50;
 
             player1_bonus.value = 50;
-        }
-        else {
+        } else {
             player1_bonus.value = 0;
         }
 
@@ -71,20 +70,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
 function calculatePlayerUpper() {
     let playerNumber;
 
-    for (var player = 2; player < 5; player++) {
+    //Bör ändra/ta bort gamla funktionen
+    for (var player = 1; player < 5; player++) {
         playerNumber = player;
 
         let playerClassUpper = document.getElementsByClassName("player" + playerNumber + "_upper");
 
+        //Iterera genom alla element och lägger på eventlistener för classen
         for (var i = 0; i < playerClassUpper.length; i++) {
             playerClassUpper[i].addEventListener("change", calculatePlayerUpper);
         }
 
         let sum = 0;
 
-        for (var item of playerClassUpper) {
-            if (item.value !== "") {
-                sum += parseInt(item.value)
+        //addera summorna
+        for (var element of playerClassUpper) {
+            if (element.value !== "") {
+                sum += parseInt(element.value)
             }
         }
 
@@ -96,27 +98,48 @@ function calculatePlayerUpper() {
             sum += 50;
 
             player_bonus.value = 50;
-        }
-        else {
+        } else {
             player_bonus.value = 0;
         }
 
-        console.log("From Upper: " + sum);
+
+
     }
 }
 
-function throwDice() {
-    dice1.value = randomize();
-    dice2.value = randomize();
-    dice3.value = randomize();
-    dice4.value = randomize();
-    dice5.value = randomize();
+function calculatePlayerUnder() {
+    for (var player = 1; player < 5; player++) {
+        playerNumber = player;
 
-}
+        let playerClassUnder = document.getElementsByClassName("player" + playerNumber);
 
-function randomize() {
-    var min = 1;
-    var max = 7;
-    var slump = Math.floor(Math.random() * (max - min) + min);
-    return slump;
-}
+        //Iterera genom alla element och lägger på eventlistener för classen
+        for (var i = 0; i < playerClassUnder.length; i++) {
+            playerClassUnder[i].addEventListener("change", calculatePlayerUpper);
+        }
+
+        let sum = 0;
+
+        //addera summorna
+        for (var element of playerClassUpper) {
+            if (element.value !== "") {
+                sum += parseInt(element.value)
+            }
+        }
+    }
+
+    function throwDice() {
+        dice1.value = randomize();
+        dice2.value = randomize();
+        dice3.value = randomize();
+        dice4.value = randomize();
+        dice5.value = randomize();
+
+    }
+
+    function randomize() {
+        var min = 1;
+        var max = 7;
+        var slump = Math.floor(Math.random() * (max - min) + min);
+        return slump;
+    }
