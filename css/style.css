@@ -6,8 +6,18 @@
 
 .container {
     margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
 }
 
+.diceRow div {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.dice input {
+    
+}
 /* - Table - */
  table {
      border: 2px rgb(13, 1, 36) solid;
