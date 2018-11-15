@@ -1,3 +1,6 @@
+var players = ["TT", "BP", "VR", "GY"];
+var playerTurn = 0;
+
 document.addEventListener("DOMContentLoaded", function (event) {
 
 
@@ -15,26 +18,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var dice5 = document.getElementById("dice5");
     var button_throwDice = document.getElementById("throwDices");
     var button_doneButton = document.getElementById("doneButton");
-    var count = 3;
+    var diceRound = 1;
+    var whosTurn = document.getElementById("whosTurn");
 
-    button_doneButton.addEventListener("click", function(event){
 
+    button_doneButton.addEventListener("click", function (event) {
+        diceRound = 1;
+        whosTurn.innerHTML = getCurrentPlayer();
 
     });
 
     button_throwDice.addEventListener("click", function (event) {
-        
-       
-        
-        if(count>0){
+
+        // Om antal tärningskast är slut, byt spelare
+        if (diceRound > 3) {
+            diceRound = 1;
+            nextPlayer();
+        }
+        whosTurn.innerHTML = getCurrentPlayer() + " " + diceRound;
         throwDice();
-        count--;
-        }
-        else{
-            //next player
-            count = 0;
-        }
-        //
+        diceRound++;
     });
 
 
@@ -128,29 +131,30 @@ function calculatePlayerUpper() {
 
 function throwDice() {
 
-    
-    if(!document.getElementById("diceCheck1").checked){
-    dice1.value = randomize();
+
+    if (!document.getElementById("diceCheck1").checked) {
+        dice1.value = randomize();
     }
-    if(!document.getElementById("diceCheck2").checked){
-    dice2.value = randomize();
+    if (!document.getElementById("diceCheck2").checked) {
+        dice2.value = randomize();
     }
-    if(!document.getElementById("diceCheck3").checked){
-    dice3.value = randomize();
+    if (!document.getElementById("diceCheck3").checked) {
+        dice3.value = randomize();
     }
-    if(!document.getElementById("diceCheck4").checked){
-    dice4.value = randomize();
+    if (!document.getElementById("diceCheck4").checked) {
+        dice4.value = randomize();
     }
-    if(!document.getElementById("diceCheck5").checked){
-    dice5.value = randomize();
+    if (!document.getElementById("diceCheck5").checked) {
+        dice5.value = randomize();
     }
 }
+
 function calculatePlayerUnder() {
     for (var player = 1; player < 5; player++) {
         playerNumber = player;
 
         let playerClassUnder = document.getElementsByClassName("player" + playerNumber);
-    
+
 
         //Iterera genom alla element och lägger på eventlistener för classen
         for (var i = 0; i < playerClassUnder.length; i++) {
@@ -170,13 +174,25 @@ function calculatePlayerUnder() {
         var player_bonusUpper = document.getElementById("player" + playerNumber + "_bonus");
 
         var player_total = document.getElementById("player" + playerNumber + "_total");
-        player_total.value = sumUnder + parseInt(player_sumUpper.value) + parseInt(player_bonusUpper.value) ;
+        player_total.value = sumUnder + parseInt(player_sumUpper.value) + parseInt(player_bonusUpper.value);
     }
 }
 
-    function randomize() {
-        var min = 1;
-        var max = 7;
-        var slump = Math.floor(Math.random() * (max - min) + min);
-        return slump;
+function randomize() {
+    var min = 1;
+    var max = 7;
+    var slump = Math.floor(Math.random() * (max - min) + min);
+    return slump;
+}
+
+function nextPlayer() {
+    if (playerTurn < players.length-1) {
+        playerTurn++;
+    } else {
+        playerTurn = 0;
     }
+}
+
+function getCurrentPlayer() {
+    return players[playerTurn];
+}
