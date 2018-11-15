@@ -50,7 +50,7 @@
 
             <!-- Yatzy Table -->
             <div class="col-lg-5 col-md-6 col-sm-12 d-flex justify-content-center">
-                <table>
+                <table id="yatzyArea">
                     <tr>
                         <th>Spelare</th>
                         <th>TT</th>
@@ -201,44 +201,44 @@
                         </div>
                     </div>
                     <div class="dice col-lg-4 col-md-6 col-sm-4 col-4 d-flex justify-content-center">
-                            <div class="row">
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <img src="img/dice3.png">
-                                    </div>
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <input type="checkbox">
-                                    </div>
-                                </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                                <img src="img/dice3.png">
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input type="checkbox">
+                            </div>
+                        </div>
                     </div>
                     <div class="dice col-lg-4 col-md-6 col-sm-4 col-4 d-flex justify-content-center">
-                            <div class="row">
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <img src="img/dice4.png">
-                                    </div>
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <input type="checkbox">
-                                    </div>
-                                </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                                <img src="img/dice4.png">
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input type="checkbox">
+                            </div>
+                        </div>
                     </div>
                     <div class="dice col-lg-6 col-md-6 col-sm-6 col-4 d-flex justify-content-center">
-                            <div class="row">
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <img src="img/dice5.png">
-                                    </div>
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <input type="checkbox">
-                                    </div>
-                                </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                                <img src="img/dice5.png">
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input type="checkbox">
+                            </div>
+                        </div>
                     </div>
                     <div class="dice col-lg-6 col-md-6 col-sm-6 col-4 d-flex justify-content-center">
-                            <div class="row">
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <img src="img/dice6.png">
-                                    </div>
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <input type="checkbox">
-                                    </div>
-                                </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                                <img src="img/dice6.png">
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input type="checkbox">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -262,6 +262,16 @@
             </div>
 
             <p id="whosTurn"></p>
+
+            <div>
+
+                <ol>
+                    <li>Spelare: Poäng:</li>
+                    <li>Spelare: Poäng:</li>
+                    <li>Spelare: Poäng:</li>
+                </ol>
+
+            </div>
 
             <div class="col-lg-3 col-md-12 col-sm-12 players">
                 <div class="row">
@@ -302,6 +312,7 @@
     <script>
         calculatePlayerUnder()
     </script>
+    
 
 </body>
 

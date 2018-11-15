@@ -19,7 +19,8 @@
     
 }
 /* - Table - */
- table {
+
+table {
      border: 2px rgb(13, 1, 36) solid;
      border-collapse: collapse;
      animation-duration: 1s;
@@ -69,6 +70,13 @@
      color: #ffd64c;
      background-color: #171717;
  } 
+
+ #tableScore{
+    background-color: pink;
+    border: none;
+    border-collapse: collapse;
+}
+
 
 .navbar {
      background-color: black;

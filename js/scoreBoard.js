@@ -172,6 +172,8 @@ function calculatePlayerUnder() {
         var player_total = document.getElementById("player" + playerNumber + "_total");
         player_total.value = sumUnder + parseInt(player_sumUpper.value) + parseInt(player_bonusUpper.value) ;
     }
+    
+    winner();
 }
 
     function randomize() {
@@ -179,4 +181,29 @@ function calculatePlayerUnder() {
         var max = 7;
         var slump = Math.floor(Math.random() * (max - min) + min);
         return slump;
+    }
+
+    function winner(){
+        var player1 = {
+            points: parseInt(document.getElementById("player1_total").value),
+            name: "player1"
+        }
+        var player2 = {
+            points: parseInt(document.getElementById("player2_total").value),
+            name: "player2"
+        }
+    
+        var player3 = document.getElementById("player3_total");
+        var player4 = document.getElementById("player4_total");
+    
+        var players = [player1, player2];
+    
+    
+    
+        var sorted = players.sort(function (a, b) {
+            return a.points - b.points
+        });
+    
+        console.log(sorted);
+    
     }
