@@ -212,11 +212,18 @@ function winner() {
         points: parseInt(document.getElementById("player2_total").value),
         name: "player2"
     }
+    var player3 = {
+        points: parseInt(document.getElementById("player3_total").value),
+        name: "player3"
+    }
+       
+    var player4 = {
+        points: parseInt(document.getElementById("player4_total").value),
+        name: "player4"
+    }
+    
 
-    var player3 = document.getElementById("player3_total");
-    var player4 = document.getElementById("player4_total");
-
-    var players = [player1, player2];
+    var players = [player1, player2, player3, player4];
 
 
 
@@ -225,5 +232,17 @@ function winner() {
     });
 
     console.log(sorted);
+
+  var first = document.getElementById("firstPlace");
+  var second = document.getElementById("secondPlace");
+  var third = document.getElementById("thirdPlace");
+
+  if (sorted[0].points != 0)
+  first.innerHTML = sorted[0].name +" "+ sorted[0].points;
+  second.innerHTML =sorted[1].name +" "+  sorted[1].points;
+  third.innerHTML = sorted[2].name +" "+ sorted[2].points;
+
+
+
 
 }
