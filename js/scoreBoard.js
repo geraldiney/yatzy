@@ -17,20 +17,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var button_doneButton = document.getElementById("doneButton");
     var count = 3;
 
-    button_doneButton.addEventListener("click", function(event){
+    button_doneButton.addEventListener("click", function (event) {
 
 
     });
 
     button_throwDice.addEventListener("click", function (event) {
-        
-       
-        
-        if(count>0){
-        throwDice();
-        count--;
-        }
-        else{
+
+
+
+        if (count > 0) {
+            throwDice();
+            count--;
+        } else {
             //next player
             count = 0;
         }
@@ -64,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
         var player1_bonus = document.getElementById("player1_bonus");
         var player1_sum = document.getElementById("player1_sum");
-        player1_sum.value = total;
+
         //Bonus
         if (total >= 63) {
             total += 50;
@@ -126,31 +125,12 @@ function calculatePlayerUpper() {
     }
 }
 
-function throwDice() {
-
-    
-    if(!document.getElementById("diceCheck1").checked){
-    dice1.value = randomize();
-    }
-    if(!document.getElementById("diceCheck2").checked){
-    dice2.value = randomize();
-    }
-    if(!document.getElementById("diceCheck3").checked){
-    dice3.value = randomize();
-    }
-    if(!document.getElementById("diceCheck4").checked){
-    dice4.value = randomize();
-    }
-    if(!document.getElementById("diceCheck5").checked){
-    dice5.value = randomize();
-    }
-}
 function calculatePlayerUnder() {
     for (var player = 1; player < 5; player++) {
         playerNumber = player;
 
         let playerClassUnder = document.getElementsByClassName("player" + playerNumber);
-    
+
 
         //Iterera genom alla element och lägger på eventlistener för classen
         for (var i = 0; i < playerClassUnder.length; i++) {
@@ -170,40 +150,61 @@ function calculatePlayerUnder() {
         var player_bonusUpper = document.getElementById("player" + playerNumber + "_bonus");
 
         var player_total = document.getElementById("player" + playerNumber + "_total");
-        player_total.value = sumUnder + parseInt(player_sumUpper.value) + parseInt(player_bonusUpper.value) ;
+        player_total.value = sumUnder + parseInt(player_sumUpper.value) + parseInt(player_bonusUpper.value);
     }
-    
     winner();
 }
 
-    function randomize() {
-        var min = 1;
-        var max = 7;
-        var slump = Math.floor(Math.random() * (max - min) + min);
-        return slump;
+
+function throwDice() {
+
+
+    if (!document.getElementById("diceCheck1").checked) {
+        dice1.value = randomize();
+    }
+    if (!document.getElementById("diceCheck2").checked) {
+        dice2.value = randomize();
+    }
+    if (!document.getElementById("diceCheck3").checked) {
+        dice3.value = randomize();
+    }
+    if (!document.getElementById("diceCheck4").checked) {
+        dice4.value = randomize();
+    }
+    if (!document.getElementById("diceCheck5").checked) {
+        dice5.value = randomize();
+    }
+}
+
+
+function randomize() {
+    var min = 1;
+    var max = 7;
+    var slump = Math.floor(Math.random() * (max - min) + min);
+    return slump;
+}
+
+function winner() {
+    var player1 = {
+        points: parseInt(document.getElementById("player1_total").value),
+        name: "player1"
+    }
+    var player2 = {
+        points: parseInt(document.getElementById("player2_total").value),
+        name: "player2"
     }
 
-    function winner(){
-        var player1 = {
-            points: parseInt(document.getElementById("player1_total").value),
-            name: "player1"
-        }
-        var player2 = {
-            points: parseInt(document.getElementById("player2_total").value),
-            name: "player2"
-        }
-    
-        var player3 = document.getElementById("player3_total");
-        var player4 = document.getElementById("player4_total");
-    
-        var players = [player1, player2];
-    
-    
-    
-        var sorted = players.sort(function (a, b) {
-            return a.points - b.points
-        });
-    
-        console.log(sorted);
-    
-    }
+    var player3 = document.getElementById("player3_total");
+    var player4 = document.getElementById("player4_total");
+
+    var players = [player1, player2];
+
+
+
+    var sorted = players.sort(function (a, b) {
+        return b.points - a.points
+    });
+
+    console.log(sorted);
+
+}
