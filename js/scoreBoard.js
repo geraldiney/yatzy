@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             diceRound = 1;
             nextPlayer();
         }
-        whosTurn.innerHTML = getCurrentPlayer() + " Kast:" + diceRound;
+        whosTurn.innerHTML = getCurrentPlayer() + " Kast " + diceRound;
         throwDice();
         diceRound++;
     });
@@ -98,9 +98,6 @@ function calculatePlayerUpper() {
         }
 
         calculatePlayerUnder();
-
-
-
     }
 }
 
@@ -144,7 +141,6 @@ function nextPlayer() {
     } else {
         playerTurn = 0;
     }
-
 }
 
 function getCurrentPlayer() {
@@ -155,24 +151,19 @@ function throwDice() {
 
 
     if (!document.getElementById("diceCheck1").checked) {
-        dice1.value = randomize();
-        changeDiceImage(dice1.value, 1);    
+        changeDiceImage(randomize(), 1);    
     }
     if (!document.getElementById("diceCheck2").checked) {
-        dice2.value = randomize();
-        changeDiceImage(dice2.value, 2);
+        changeDiceImage(randomize(), 2);
     }
     if (!document.getElementById("diceCheck3").checked) {
-        dice3.value = randomize();
-        changeDiceImage(dice3.value, 3);
+        changeDiceImage(randomize(), 3);
     }
     if (!document.getElementById("diceCheck4").checked) {
-        dice4.value = randomize();
-        changeDiceImage(dice4.value, 4);
+        changeDiceImage(randomize(), 4);
     }
     if (!document.getElementById("diceCheck5").checked) {
-        dice5.value = randomize();
-        changeDiceImage(dice5.value, 5);
+        changeDiceImage(randomize(), 5);
     }
 }
 

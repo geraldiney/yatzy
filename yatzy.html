@@ -195,7 +195,7 @@
                                 <img id="diceImage1" src="img/dice2.png">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input type="checkbox">
+                                <input id="diceCheck1" type="checkbox">
                             </div>
                         </div>
                     </div>
@@ -205,17 +205,17 @@
                                 <img id="diceImage2" src="img/dice3.png">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input type="checkbox">
+                                <input id="diceCheck2" type="checkbox">
                             </div>
                         </div>
                     </div>
                     <div class="dice col-lg-4 col-md-6 col-sm-4 col-4 d-flex justify-content-center">
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
-                                <img id="diceImage3" src="img/dice4.png">
+                                <img id="diceImage3" src="img/dice5.png">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input type="checkbox">
+                                <input id="diceCheck3" type="checkbox">
                             </div>
                         </div>
                     </div>
@@ -225,7 +225,7 @@
                                 <img id="diceImage4" src="img/dice5.png">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input type="checkbox">
+                                <input id="diceCheck4" type="checkbox">
                             </div>
                         </div>
                     </div>
@@ -235,7 +235,7 @@
                                 <img id="diceImage5" src="img/dice6.png">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input type="checkbox">
+                                <input id="diceCheck5" type="checkbox">
                             </div>
                         </div>
                     </div>
@@ -243,37 +243,26 @@
                 <div class="row">
 
                     <div class="col-lg-12">
-                        <p>Spelare:</p>
-                        <p id="whosTurn"></p>
+                        <p>Spelare: <span id="whosTurn"></span></p>
+
                     </div>
                     <div class="col">
                         <button id="throwDices">Kasta tärningar</button>
                         <button id="doneButton">Klar</button>
                     </div>
-                </div>
-                <div>
-                    <input id="dice1" class="dices" type="numbers">
-                    <input id="diceCheck1" type="checkbox">
-                    <input id="dice2" class="dices" type="numbers">
-                    <input id="diceCheck2" type="checkbox">
-                    <input id="dice3" class="dices" type="numbers">
-                    <input id="diceCheck3" type="checkbox">
-                    <input id="dice4" class="dices" type="numbers">
-                    <input id="diceCheck4" type="checkbox">
-                    <input id="dice5" class="dices" type="numbers">
-                    <input id="diceCheck5" type="checkbox">
+                    <div class="col-lg-12">
+                        <ol>
+                            <li id="firstPlace"></li>
+                            <li id="secondPlace"></li>
+                            <li id="thirdPlace"></li>
+                        </ol>
+
+                    </div>
+
                 </div>
             </div>
 
-            <div>
 
-                <ol>
-                    <li id="firstPlace"></li>
-                    <li id="secondPlace"></li>
-                    <li id="thirdPlace"></li>
-                </ol>
-
-            </div>
         </div>
     </div>
     <div class="row">
