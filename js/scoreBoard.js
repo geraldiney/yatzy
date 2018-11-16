@@ -3,7 +3,8 @@ var playerTurn = 0;
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
-
+    calculatePlayerUpper();
+    calculatePlayerUnder();
 
     var ones = document.getElementById("player1_ones");
     var twos = document.getElementById("player1_twos");
