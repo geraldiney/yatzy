@@ -77,6 +77,9 @@ table {
     border-collapse: collapse;
 }
 
+.diceArea img:hover {
+    opacity: 0.3;
+}
 
 .navbar {
      background-color: black;

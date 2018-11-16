@@ -42,6 +42,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         diceRound++;
     });
 
+    // for (var i = 1; i <= 5; i++){
+    //     var diceImage = document.getElementById('diceImage' + i);
+    //     diceImage.addEventListener("click", function() {
+    //         diceImage.src = 'img/blackdice' + i + '.png';
+    //     });
+    // }
 
 
 
