@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     button_doneButton.addEventListener("click", function (event) {
         diceRound = 1;
+        nextPlayer();
         whosTurn.innerHTML = getCurrentPlayer();
 
     });
