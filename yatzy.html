@@ -102,17 +102,17 @@
                     </tr>
                     <tr>
                         <td>Summa</td>
-                        <td><input class="player1_special" id="player1_sum" type="number" min="0"></td>
-                        <td><input class="player2_special" id="player2_sum" type="number" min="0"></td>
-                        <td><input class="player3_special" id="player3_sum" type="number" min="0"></td>
-                        <td><input class="player4_special" id="player4_sum" type="number" min="0"></td>
+                        <td><input class="player1_special sum" id="player1_sum" type="number" min="0"></td>
+                        <td><input class="player2_special sum" id="player2_sum" type="number" min="0"></td>
+                        <td><input class="player3_special sum" id="player3_sum" type="number" min="0"></td>
+                        <td><input class="player4_special sum" id="player4_sum" type="number" min="0"></td>
                     </tr>
                     <tr>
                         <td>Bonus</td>
-                        <td><input class="player1_special" id="player1_bonus" type="number" min="0"></td>
-                        <td><input class="player2_special" id="player2_bonus" type="number" min="0"></td>
-                        <td><input class="player3_special" id="player3_bonus" type="number" min="0"></td>
-                        <td><input class="player4_special" id="player4_bonus" type="number" min="0"></td>
+                        <td><input class="player1_special bonus" id="player1_bonus" type="number" min="0"></td>
+                        <td><input class="player2_special bonus" id="player2_bonus" type="number" min="0"></td>
+                        <td><input class="player3_special bonus" id="player3_bonus" type="number" min="0"></td>
+                        <td><input class="player4_special bonus" id="player4_bonus" type="number" min="0"></td>
                     </tr>
                     <tr>
                         <td>Ett par</td>
@@ -192,7 +192,7 @@
                     <div class="dice col-lg-4 col-md-6 col-sm-4 col-4 d-flex justify-content-center">
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
-                                <img src="img/dice2.png">
+                                <img id="diceImage1" src="img/dice2.png">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input type="checkbox">
@@ -202,7 +202,7 @@
                     <div class="dice col-lg-4 col-md-6 col-sm-4 col-4 d-flex justify-content-center">
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
-                                <img src="img/dice3.png">
+                                <img id="diceImage2" src="img/dice3.png">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input type="checkbox">
@@ -212,7 +212,7 @@
                     <div class="dice col-lg-4 col-md-6 col-sm-4 col-4 d-flex justify-content-center">
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
-                                <img src="img/dice4.png">
+                                <img id="diceImage3" src="img/dice4.png">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input type="checkbox">
@@ -222,7 +222,7 @@
                     <div class="dice col-lg-6 col-md-6 col-sm-6 col-4 d-flex justify-content-center">
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
-                                <img src="img/dice5.png">
+                                <img id="diceImage4" src="img/dice5.png">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input type="checkbox">
@@ -232,7 +232,7 @@
                     <div class="dice col-lg-6 col-md-6 col-sm-6 col-4 d-flex justify-content-center">
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
-                                <img src="img/dice6.png">
+                                <img id="diceImage5" src="img/dice6.png">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input type="checkbox">
@@ -241,6 +241,11 @@
                     </div>
                 </div>
                 <div class="row">
+
+                    <div class="col-lg-12">
+                        <p>Spelare:</p>
+                        <p id="whosTurn"></p>
+                    </div>
                     <div class="col">
                         <button id="throwDices">Kasta tärningar</button>
                         <button id="doneButton">Klar</button>
@@ -260,31 +265,14 @@
                 </div>
             </div>
 
-            <p id="whosTurn">jk</p>
-
             <div>
 
                 <ol>
-                    <li id = "firstPlace"></li>
-                    <li id = "secondPlace"></li>
-                    <li id = "thirdPlace"></li>
+                    <li id="firstPlace"></li>
+                    <li id="secondPlace"></li>
+                    <li id="thirdPlace"></li>
                 </ol>
 
-            </div>
-
-            <div class="col-lg-3 col-md-12 col-sm-12 players">
-                <div class="row">
-                    <img src="https://randomuser.me/api/portraits/men/46.jpg">
-                </div>
-                <div class="row">
-                    <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="">
-                </div>
-                <div class="row">
-                    <img src="https://randomuser.me/api/portraits/women/17.jpg" alt="">
-                </div>
-                <div class="row">
-                    <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="">
-                </div>
             </div>
         </div>
     </div>

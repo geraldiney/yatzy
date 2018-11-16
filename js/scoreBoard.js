@@ -4,7 +4,6 @@ var playerTurn = 0;
 document.addEventListener("DOMContentLoaded", function (event) {
 
     calculatePlayerUpper();
-    calculatePlayerUnder();
 
     var ones = document.getElementById("player1_ones");
     var twos = document.getElementById("player1_twos");
@@ -23,13 +22,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var whosTurn = document.getElementById("whosTurn");
 
 
+    // Klar-knappen
     button_doneButton.addEventListener("click", function (event) {
         diceRound = 1;
         nextPlayer();
         whosTurn.innerHTML = getCurrentPlayer();
-
     });
 
+    // Kasta tärningar-knappen
     button_throwDice.addEventListener("click", function (event) {
 
         // Om antal tärningskast är slut, byt spelare
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             diceRound = 1;
             nextPlayer();
         }
-        whosTurn.innerHTML = getCurrentPlayer() + " " + diceRound;
+        whosTurn.innerHTML = getCurrentPlayer() + " Kast:" + diceRound;
         throwDice();
         diceRound++;
     });
@@ -55,41 +55,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // Ha koll på om någon klickar på beräkna-knappen.
 
-    function calculatePlayer(event) {
-        // Do something.
-        var total = 0;
-
-        for (var score of scores) {
-            if (score.value !== "") {
-                total += parseInt(score.value);
-
-                console.log(total);
-            }
-
-        }
-        var player1_bonus = document.getElementById("player1_bonus");
-        var player1_sum = document.getElementById("player1_sum");
-
-        //Bonus
-        if (total >= 63) {
-            total += 50;
-
-            player1_bonus.value = 50;
-        } else {
-            player1_bonus.value = 0;
-        }
-
-
-    }
-    ones.addEventListener("change", calculatePlayer);
-
-
-
-
-
-
-
 });
+
 //Funktion utifrån classnamn
 function calculatePlayerUpper() {
     let playerNumber;
@@ -103,7 +70,10 @@ function calculatePlayerUpper() {
         //Iterera genom alla element och lägger på eventlistener för classen
         for (var i = 0; i < playerClassUpper.length; i++) {
             playerClassUpper[i].addEventListener("change", calculatePlayerUpper);
+
         }
+
+
 
         let sum = 0;
 
@@ -116,6 +86,7 @@ function calculatePlayerUpper() {
 
         var player_bonus = document.getElementById("player" + playerNumber + "_bonus");
         var player_sum = document.getElementById("player" + playerNumber + "_sum");
+
         player_sum.value = sum;
         //Bonus
         if (sum >= 63) {
@@ -126,21 +97,23 @@ function calculatePlayerUpper() {
             player_bonus.value = 0;
         }
 
+        calculatePlayerUnder();
+
 
 
     }
 }
 
 function calculatePlayerUnder() {
-    for (var player = 1; player < 5; player++) {
-        playerNumber = player;
+
+    for (var playerNumber = 1; playerNumber < 5; playerNumber++) {
 
         let playerClassUnder = document.getElementsByClassName("player" + playerNumber);
-
 
         //Iterera genom alla element och lägger på eventlistener för classen
         for (var i = 0; i < playerClassUnder.length; i++) {
             playerClassUnder[i].addEventListener("change", calculatePlayerUnder);
+
         }
 
         let sumUnder = 0;
@@ -165,6 +138,7 @@ function calculatePlayerUnder() {
 
 
 function nextPlayer() {
+
     if (playerTurn < players.length - 1) {
         playerTurn++;
     } else {
@@ -182,19 +156,29 @@ function throwDice() {
 
     if (!document.getElementById("diceCheck1").checked) {
         dice1.value = randomize();
+        changeDiceImage(dice1.value, 1);    
     }
     if (!document.getElementById("diceCheck2").checked) {
         dice2.value = randomize();
+        changeDiceImage(dice2.value, 2);
     }
     if (!document.getElementById("diceCheck3").checked) {
         dice3.value = randomize();
+        changeDiceImage(dice3.value, 3);
     }
     if (!document.getElementById("diceCheck4").checked) {
         dice4.value = randomize();
+        changeDiceImage(dice4.value, 4);
     }
     if (!document.getElementById("diceCheck5").checked) {
         dice5.value = randomize();
+        changeDiceImage(dice5.value, 5);
     }
+}
+
+function changeDiceImage(value, diceImage){
+    var img = document.getElementById('diceImage' + diceImage);
+    img.src = 'img/dice' + value + '.png';
 }
 
 
@@ -206,6 +190,7 @@ function randomize() {
 }
 
 function winner() {
+
     var player1 = {
         points: parseInt(document.getElementById("player1_total").value),
         name: "player1"
@@ -218,33 +203,24 @@ function winner() {
         points: parseInt(document.getElementById("player3_total").value),
         name: "player3"
     }
-       
+
     var player4 = {
         points: parseInt(document.getElementById("player4_total").value),
         name: "player4"
     }
-    
+
 
     var players = [player1, player2, player3, player4];
-
-
-
     var sorted = players.sort(function (a, b) {
         return b.points - a.points
     });
 
-    console.log(sorted);
-
-  var first = document.getElementById("firstPlace");
-  var second = document.getElementById("secondPlace");
-  var third = document.getElementById("thirdPlace");
-
-  if (sorted[0].points != 0)
-  first.innerHTML = sorted[0].name +" "+ sorted[0].points;
-  second.innerHTML =sorted[1].name +" "+  sorted[1].points;
-  third.innerHTML = sorted[2].name +" "+ sorted[2].points;
+    var first = document.getElementById("firstPlace");
+    var second = document.getElementById("secondPlace");
+    var third = document.getElementById("thirdPlace");
 
 
-
-
+    first.innerHTML = sorted[0].name + " " + sorted[0].points;
+    second.innerHTML = sorted[1].name + " " + sorted[1].points;
+    third.innerHTML = sorted[2].name + " " + sorted[2].points;
 }
